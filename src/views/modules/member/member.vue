@@ -24,7 +24,15 @@
       <el-table-column prop="nickname" header-align="center" align="center" label="昵称"></el-table-column>
       <el-table-column prop="mobile" header-align="center" align="center" label="手机号码"></el-table-column>
       <el-table-column prop="email" header-align="center" align="center" label="邮箱"></el-table-column>
-      <el-table-column prop="header" header-align="center" align="center" label="头像"></el-table-column>
+      <el-table-column prop="header" header-align="center" align="center" label="头像">
+        <template slot-scope="scope">
+          <el-image
+              style="width: 100%; height: 100%"
+              :src="scope.row.header"
+          fit="cover"></el-image>
+          <!-- <img :src="scope.row.logo" style="width: 100px; height: 80px" /> -->
+        </template>
+      </el-table-column>
       <el-table-column prop="gender" header-align="center" align="center" label="性别"></el-table-column>
       <el-table-column prop="birth" header-align="center" align="center" label="生日"></el-table-column>
       <el-table-column prop="city" header-align="center" align="center" label="所在城市"></el-table-column>

@@ -7,9 +7,11 @@
     <template v-if="!loading">
       <main-navbar />
       <main-sidebar />
+
       <div class="site-content__wrapper" :style="{ 'min-height': documentClientHeight + 'px' }">
         <main-content v-if="!$store.state.common.contentIsNeedRefresh" />
       </div>
+
     </template>
   </div>
 </template>
